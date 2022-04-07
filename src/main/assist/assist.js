@@ -67,7 +67,7 @@ export const debounce = (fn, delay = 300, immediate = false) => {
 
 export const throttle = (fn, delay) => {
   let flag = true;
-  return (...args) => {
+  return function (...args) {
     if (!flag) return;
     flag = false;
     setTimeout(() => {
