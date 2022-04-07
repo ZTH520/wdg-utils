@@ -1,11 +1,13 @@
 import { format, makeChTime } from '../../src/index';
 
 describe('转换时间指定格式', () => {
-  const date = new Date(1649296800000);
-  const fmt = 'yyyy-MM-dd hh:mm:ss';
-  it(`format("${date}", "${fmt}") -> should return 2022-04-07 10:00:00`, () => {
-    const res = format(date, fmt);
-    expect(res).toBe('2022-04-07 10:00:00');
+  it('format(new Date(), "yyyyMMddhhmmss") -> should return string', () => {
+    const str = format(new Date(), 'yyyy-MM-dd hh:mm:ss');
+    expect(str).toHaveLength(19);
+  });
+  it('format(new Date(), "yyyy-MM-dd hh:mm:ss") -> should return string', () => {
+    const str = format(new Date(), 'yyyy-MM-dd hh:mm:ss');
+    expect(str).toContain('-');
   });
 });
 
