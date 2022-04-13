@@ -1,6 +1,6 @@
 {
   "name": "wdg-utils",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Common tool functions for the front-end",
   "main": "dist/wdg-utils.cjs.js",
   "module": "dist/wdg-utils.esm.js",
